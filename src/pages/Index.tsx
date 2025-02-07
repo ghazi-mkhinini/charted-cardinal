@@ -69,7 +69,7 @@ const Index = () => {
               </div>
 
               {/* Charts Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 lg:gap-3">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-3">
                 <ChartContainer title="Tickets by Priority">
                   <PriorityChart />
                 </ChartContainer>
