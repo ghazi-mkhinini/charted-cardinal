@@ -51,9 +51,9 @@ const Index = () => {
       <Sidebar />
       <div className="flex-1 flex flex-col overflow-hidden">
         <Navbar />
-        <div className="flex-1 overflow-y-auto p-6">
+        <div className="flex-1 overflow-y-auto p-4 lg:p-6">
           <DashboardHeader />
-          <div className="grid grid-cols-12 gap-6">
+          <div className="grid grid-cols-12 gap-4 lg:gap-6">
             {/* Filters Section */}
             <div className="col-span-12 lg:col-span-3">
               <DashboardFilters />
@@ -62,14 +62,14 @@ const Index = () => {
             {/* Main Content */}
             <div className="col-span-12 lg:col-span-9">
               {/* KPI Cards */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3 mb-4 lg:mb-6">
                 {kpiData.map((kpi, index) => (
                   <KPICard key={index} {...kpi} />
                 ))}
               </div>
 
               {/* Charts Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
                 <ChartContainer title="Tickets by Priority">
                   <PriorityChart />
                 </ChartContainer>
@@ -88,7 +88,7 @@ const Index = () => {
                 <ChartContainer title="Average Satisfaction Rating">
                   <SatisfactionChart />
                 </ChartContainer>
-                <ChartContainer title="Tickets Overtime">
+                <ChartContainer title="Tickets Overtime" >
                   <TimelineChart />
                 </ChartContainer>
               </div>
