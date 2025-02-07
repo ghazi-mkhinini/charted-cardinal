@@ -6,6 +6,13 @@ import DashboardHeader from "@/components/dashboard/DashboardHeader";
 import DashboardFilters from "@/components/dashboard/DashboardFilters";
 import KPICard from "@/components/dashboard/KPICard";
 import ChartContainer from "@/components/dashboard/ChartContainer";
+import PriorityChart from "@/components/charts/PriorityChart";
+import CategoryChart from "@/components/charts/CategoryChart";
+import SeverityChart from "@/components/charts/SeverityChart";
+import TopAgentChart from "@/components/charts/TopAgentChart";
+import WorkTypeChart from "@/components/charts/WorkTypeChart";
+import SatisfactionChart from "@/components/charts/SatisfactionChart";
+import TimelineChart from "@/components/charts/TimelineChart";
 
 const kpiData = [
   {
@@ -64,25 +71,25 @@ const Index = () => {
               {/* Charts Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <ChartContainer title="Tickets by Priority">
-                  {/* Priority Chart will go here */}
+                  <PriorityChart />
                 </ChartContainer>
                 <ChartContainer title="Tickets by Category">
-                  {/* Category Chart will go here */}
+                  <CategoryChart />
                 </ChartContainer>
                 <ChartContainer title="Tickets by Severity">
-                  {/* Severity Chart will go here */}
+                  <SeverityChart />
                 </ChartContainer>
                 <ChartContainer title="Top IT Agent">
-                  {/* Agent Chart will go here */}
+                  <TopAgentChart />
                 </ChartContainer>
                 <ChartContainer title="Tickets by Work Type">
-                  {/* Work Type Chart will go here */}
+                  <WorkTypeChart />
                 </ChartContainer>
                 <ChartContainer title="Average Satisfaction Rating">
-                  {/* Rating Chart will go here */}
+                  <SatisfactionChart />
                 </ChartContainer>
                 <ChartContainer title="Tickets Overtime">
-                  {/* Timeline Chart will go here */}
+                  <TimelineChart />
                 </ChartContainer>
               </div>
             </div>
