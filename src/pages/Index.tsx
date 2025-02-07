@@ -20,28 +20,28 @@ const kpiData = [
     value: "26,935",
     comparison: "32.3% vs LY",
     trend: "up" as const,
-    icon: <FileText className="h-6 w-6 text-blue-400" />,
+    icon: <FileText className="h-5 w-5 text-blue-400" />,
   },
   {
     title: "Tickets Closed",
     value: "26,860",
     comparison: "32.0% vs LY",
     trend: "up" as const,
-    icon: <CheckCircle className="h-6 w-6 text-green-400" />,
+    icon: <CheckCircle className="h-5 w-5 text-green-400" />,
   },
   {
     title: "Closure Rate",
     value: "99.72%",
     comparison: "-0.23% vs LY",
     trend: "down" as const,
-    icon: <BarChartBig className="h-6 w-6 text-purple-400" />,
+    icon: <BarChartBig className="h-5 w-5 text-purple-400" />,
   },
   {
     title: "Within SLA",
     value: "19,539",
     comparison: "Achieved: 72.7%",
     trend: "up" as const,
-    icon: <Clock className="h-6 w-6 text-yellow-400" />,
+    icon: <Clock className="h-5 w-5 text-yellow-400" />,
   },
 ];
 
@@ -51,9 +51,9 @@ const Index = () => {
       <Sidebar />
       <div className="flex-1 flex flex-col overflow-hidden">
         <Navbar />
-        <div className="flex-1 overflow-y-auto p-4 lg:p-6">
+        <div className="flex-1 overflow-y-auto p-2 lg:p-4">
           <DashboardHeader />
-          <div className="grid grid-cols-12 gap-4 lg:gap-6">
+          <div className="grid grid-cols-12 gap-2 lg:gap-4">
             {/* Filters Section */}
             <div className="col-span-12 lg:col-span-3">
               <DashboardFilters />
@@ -62,14 +62,14 @@ const Index = () => {
             {/* Main Content */}
             <div className="col-span-12 lg:col-span-9">
               {/* KPI Cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3 mb-4 lg:mb-6">
+              <div className="grid grid-cols-2 xl:grid-cols-4 gap-2 mb-2 lg:mb-4">
                 {kpiData.map((kpi, index) => (
                   <KPICard key={index} {...kpi} />
                 ))}
               </div>
 
               {/* Charts Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 lg:gap-4">
                 <ChartContainer title="Tickets by Priority">
                   <PriorityChart />
                 </ChartContainer>
@@ -88,7 +88,7 @@ const Index = () => {
                 <ChartContainer title="Average Satisfaction Rating">
                   <SatisfactionChart />
                 </ChartContainer>
-                <ChartContainer title="Tickets Overtime" >
+                <ChartContainer title="Tickets Overtime">
                   <TimelineChart />
                 </ChartContainer>
               </div>
