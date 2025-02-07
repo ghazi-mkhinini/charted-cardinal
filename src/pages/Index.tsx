@@ -20,28 +20,28 @@ const kpiData = [
     value: "26,935",
     comparison: "32.3% vs LY",
     trend: "up" as const,
-    icon: <FileText className="h-5 w-5 text-blue-400" />,
+    icon: <FileText className="h-4 w-4 text-blue-400" />,
   },
   {
     title: "Tickets Closed",
     value: "26,860",
     comparison: "32.0% vs LY",
     trend: "up" as const,
-    icon: <CheckCircle className="h-5 w-5 text-green-400" />,
+    icon: <CheckCircle className="h-4 w-4 text-green-400" />,
   },
   {
     title: "Closure Rate",
     value: "99.72%",
     comparison: "-0.23% vs LY",
     trend: "down" as const,
-    icon: <BarChartBig className="h-5 w-5 text-purple-400" />,
+    icon: <BarChartBig className="h-4 w-4 text-purple-400" />,
   },
   {
     title: "Within SLA",
     value: "19,539",
     comparison: "Achieved: 72.7%",
     trend: "up" as const,
-    icon: <Clock className="h-5 w-5 text-yellow-400" />,
+    icon: <Clock className="h-4 w-4 text-yellow-400" />,
   },
 ];
 
@@ -51,25 +51,25 @@ const Index = () => {
       <Sidebar />
       <div className="flex-1 flex flex-col overflow-hidden">
         <Navbar />
-        <div className="flex-1 overflow-y-auto p-2 lg:p-4">
+        <div className="flex-1 overflow-y-auto p-2 lg:p-3">
           <DashboardHeader />
-          <div className="grid grid-cols-12 gap-2 lg:gap-4">
+          <div className="grid grid-cols-12 gap-2 lg:gap-3">
             {/* Filters Section */}
-            <div className="col-span-12 lg:col-span-3">
+            <div className="col-span-12 lg:col-span-2">
               <DashboardFilters />
             </div>
             
             {/* Main Content */}
-            <div className="col-span-12 lg:col-span-9">
+            <div className="col-span-12 lg:col-span-10">
               {/* KPI Cards */}
-              <div className="grid grid-cols-2 xl:grid-cols-4 gap-2 mb-2 lg:mb-4">
+              <div className="grid grid-cols-4 gap-2 mb-2 lg:mb-3">
                 {kpiData.map((kpi, index) => (
                   <KPICard key={index} {...kpi} />
                 ))}
               </div>
 
               {/* Charts Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 lg:gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 lg:gap-3">
                 <ChartContainer title="Tickets by Priority">
                   <PriorityChart />
                 </ChartContainer>
